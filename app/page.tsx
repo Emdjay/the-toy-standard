@@ -875,7 +875,7 @@ export default function Home() {
               <h2>Category picks for teens</h2>
               <p>
                 Switch categories to see nine curated picks in each lane. Links
-                are Amazon affiliate-only for now.
+                are affiliate links (Amazon or brand partners).
               </p>
             </div>
             <div className="small">Updated seasonally</div>

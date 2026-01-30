@@ -51,7 +51,7 @@ const productCategories = [
         why: "Three builds keep interest longer.",
         price: "Mid-range",
         link:
-          "https://www.amazon.com/s?k=LEGO+Creator+3-in-1+modular&tag=thetoystandar-20",
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fmodern-house-31153&u1=4657528",
         imageLabel: "Creator 3-in-1",
         imageUrl: "/lego/LEGO Creator 3-in-1 Modular Build.jpg",
       },
@@ -62,7 +62,8 @@ const productCategories = [
         verdict: "Mechanical builds with satisfying detail.",
         why: "Gears and suspension feel advanced.",
         price: "Investment",
-        link: "https://www.amazon.com/s?k=LEGO+Technic+supercar&tag=thetoystandar-20",
+        link:
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fmclaren-p1-42172&u1=4657528",
         imageLabel: "Technic Supercar",
         imageUrl: "/lego/LEGO Technic Supercar Set.jpg",
       },
@@ -74,7 +75,7 @@ const productCategories = [
         why: "Great for rooms and shelves.",
         price: "Mid-range",
         link:
-          "https://www.amazon.com/s?k=LEGO+Icons+botanical+collection&tag=thetoystandar-20",
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Ftiny-plants-10329&u1=4657528",
         imageLabel: "Botanical",
         imageUrl: "/lego/ LEGO Icons Botanical Collection.jpg",
       },
@@ -86,7 +87,7 @@ const productCategories = [
         why: "Compact but detailed skyline builds.",
         price: "Mid-range",
         link:
-          "https://www.amazon.com/s?k=LEGO+Architecture+Skyline&tag=thetoystandar-20",
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fnew-york-city-21028&u1=4657528",
         imageLabel: "Skyline",
         imageUrl: "/lego/LEGO-Architecture-Skyline.jpg",
       },
@@ -98,7 +99,7 @@ const productCategories = [
         why: "Iconic ships and solid detail.",
         price: "Mid-range",
         link:
-          "https://www.amazon.com/s?k=LEGO+Star+Wars+starfighter&tag=thetoystandar-20",
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fx-wing-starfighter-75355&u1=4657528",
         imageLabel: "Starfighter",
         imageUrl: "/lego/LEGO Star Wars Starfighter.jpg",
       },
@@ -109,7 +110,8 @@ const productCategories = [
         verdict: "Gaming crossover that keeps kids building.",
         why: "Expandable and highly replayable.",
         price: "Value pick",
-        link: "https://www.amazon.com/s?k=LEGO+Minecraft+base+set&tag=thetoystandar-20",
+        link:
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fthe-wolf-stronghold-21261&u1=4657528",
         imageLabel: "Minecraft",
         imageUrl: "/lego/LEGO Minecraft Base Set.jpg",
       },
@@ -121,7 +123,7 @@ const productCategories = [
         why: "Great detail for the size.",
         price: "Value pick",
         link:
-          "https://www.amazon.com/s?k=LEGO+Speed+Champions+set&tag=thetoystandar-20",
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fferrari-sf-24-f1-race-car-77242&u1=4657528",
         imageLabel: "Speed",
         imageUrl: "/lego/LEGO Speed Champions Set.jpg",
       },
@@ -132,7 +134,8 @@ const productCategories = [
         verdict: "Unique, fan-designed builds.",
         why: "Great conversation pieces.",
         price: "Investment",
-        link: "https://www.amazon.com/s?k=LEGO+Ideas+set&tag=thetoystandar-20",
+        link:
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Ftales-of-the-space-age-21340&u1=4657528",
         imageLabel: "Ideas",
         imageUrl: "/lego/LEGO Ideas Display Set.jpg",
       },
@@ -143,7 +146,8 @@ const productCategories = [
         verdict: "Story-driven builds for daily play.",
         why: "Vehicles and play features keep it active.",
         price: "Value pick",
-        link: "https://www.amazon.com/s?k=LEGO+City+space+mission&tag=thetoystandar-20",
+        link:
+          "https://click.linksynergy.com/deeplink?id=jl0WcnuLLsk&mid=13923&murl=https%3A%2F%2Fwww.lego.com%2Fen-us%2Fproduct%2Fmodular-galactic-spaceship-60446&u1=4657528",
         imageLabel: "City Space",
         imageUrl: "/lego/LEGO City Space Mission.jpg",
       },

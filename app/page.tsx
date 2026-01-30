@@ -915,7 +915,11 @@ export default function Home() {
           <p>
             The Toy Standard is an independent affiliate guide. Purchases made
             through our links may earn a commission that supports ongoing
-            research and updates.
+            research and updates. Contact us at{" "}
+            <a href="mailto:info@thetoystandard.com">
+              info@thetoystandard.com
+            </a>
+            .
           </p>
         </div>
       </footer>

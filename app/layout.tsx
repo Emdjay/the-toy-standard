@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Parent-first toy recommendations focused on safety, longevity, and play value.",
   },
   other: {
-    "impact-site-verification": "a43c9816-b2fb-4306-93ab-75615fba98a2",
+    "impact-site-verification": "dc3341d9-3cb7-41e5-9daf-b70d2d98cb63",
   },
 };
 

@@ -507,6 +507,63 @@ h1 {
   font-size: 0.9rem;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: flex-start;
+}
+
+.footer-popover {
+  position: relative;
+}
+
+.footer-trigger {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.footer-panel {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  top: auto;
+  left: 0;
+  width: 260px;
+  max-width: min(320px, 80vw);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--muted);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.12);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  z-index: 2;
+}
+
+.footer-popover:hover .footer-panel,
+.footer-popover:focus-within .footer-panel {
+  display: block;
+}
+
+.footer-meta {
+  margin-top: var(--space-4);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .newsletter {
@@ -517,6 +574,10 @@ h1 {
   .product-grid,
   .faq-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
 

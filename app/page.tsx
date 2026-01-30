@@ -912,15 +912,49 @@ export default function Home() {
 
       <footer className="footer">
         <div className="container">
-          <p>
-            The Toy Standard is an independent affiliate guide. Purchases made
-            through our links may earn a commission that supports ongoing
-            research and updates. Contact us at{" "}
-            <a href="mailto:info@thetoystandard.com">
-              info@thetoystandard.com
-            </a>
-            .
-          </p>
+          <div className="footer-grid">
+            <p>
+              The Toy Standard is an independent affiliate guide. Purchases
+              made through our links may earn a commission that supports
+              ongoing research and updates. Contact us at{" "}
+              <a href="mailto:info@thetoystandard.com">
+                info@thetoystandard.com
+              </a>
+              .
+            </p>
+            <div className="footer-links">
+              <div className="footer-popover">
+                <button className="footer-trigger" type="button">
+                  About
+                </button>
+                <div className="footer-panel">
+                  A parent-first, teen-friendly toy guide focused on durable,
+                  skill-building picks for ages 14–18.
+                </div>
+              </div>
+              <div className="footer-popover">
+                <button className="footer-trigger" type="button">
+                  Privacy
+                </button>
+                <div className="footer-panel">
+                  We collect only the data needed to run the site and improve
+                  recommendations. We do not sell personal data.
+                </div>
+              </div>
+              <div className="footer-popover">
+                <button className="footer-trigger" type="button">
+                  Terms
+                </button>
+                <div className="footer-panel">
+                  Content is for informational purposes only. Product details
+                  and pricing may change without notice.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="footer-meta">
+            © {new Date().getFullYear()} The Toy Standard. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>

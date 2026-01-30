@@ -777,24 +777,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container section-title">
-            <h2>Our promise to parents</h2>
-            <p>
-              The Toy Standard curates a short list of toys that balance real
-              fun, safety, and longevity. Every recommendation is chosen to
-              cut through the noise and keep teens engaged.
-            </p>
-          </div>
-        </section>
-
-        <section className="section" id="standards">
+        <section className="section compact" id="standards">
           <div className="container section-title">
             <h2>How we choose</h2>
             <p>
-              Every pick must clear a safety and longevity checklist. We focus
-              on materials, age fit, and real-world play value instead of trend
-              cycles.
+              The Toy Standard curates a short list of toys that balance real
+              fun, safety, and longevity. Every pick must clear a safety and
+              durability checklist, with real-world play value over trends.
             </p>
           </div>
           <div className="container card-grid">
@@ -849,7 +838,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="categories">
+        <section className="section compact" id="categories">
           <div className="container section-title">
             <h2>Categories teens actually stick with</h2>
             <p>

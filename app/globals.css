@@ -245,6 +245,19 @@ h1 {
   padding: var(--space-7) 0;
 }
 
+.section.compact {
+  padding: var(--space-5) 0;
+}
+
+.section.compact .section-title {
+  padding-bottom: var(--space-3);
+  gap: var(--space-4);
+}
+
+.section.compact .card-grid {
+  margin-top: var(--space-4);
+}
+
 .section-title {
   display: flex;
   align-items: flex-start;

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { Category } from "../data/categories";
@@ -98,9 +97,6 @@ export default function CategoryTabs({ categories }: CategoryTabsProps) {
             <div className="eyebrow">{activeCategory.eyebrow}</div>
             <div className="tab-header-title">
               <h3>{activeCategory.title}</h3>
-              <Link className="tab-link" href={`/categories/${activeCategory.key}`}>
-                View category page
-              </Link>
             </div>
             <p>{activeCategory.description}</p>
           </div>

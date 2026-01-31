@@ -35,12 +35,21 @@ export const metadata: Metadata = {
     siteName: "The Toy Standard",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "The Toy Standard",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Toy Standard",
     description:
       "Parent-first toy recommendations focused on safety, longevity, and play value.",
+    images: ["/og-image.svg"],
   },
   icons: {
     icon: ["/toyfavicon.ico", "/toyfavicon.png"],

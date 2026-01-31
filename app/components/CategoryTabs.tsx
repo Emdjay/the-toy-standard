@@ -1,27 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-type ProductItem = {
-  name: string;
-  brand: string;
-  ageRange: string;
-  verdict: string;
-  why: string;
-  price: string;
-  link: string;
-  imageLabel: string;
-  imageUrl?: string;
-};
-
-type Category = {
-  key: string;
-  label: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  items: ProductItem[];
-};
+import type { Category } from "../data/categories";
 
 type CategoryTabsProps = {
   categories: Category[];
@@ -30,32 +13,78 @@ type CategoryTabsProps = {
 export default function CategoryTabs({ categories }: CategoryTabsProps) {
   const initialKey = categories[0]?.key ?? "";
   const [activeKey, setActiveKey] = useState(initialKey);
+  const [isStuck, setIsStuck] = useState(false);
+  const tabBarRef = useRef<HTMLDivElement | null>(null);
   const activeCategory = useMemo(
     () => categories.find((category) => category.key === activeKey) ?? categories[0],
     [activeKey, categories],
   );
 
+  useEffect(() => {
+    let ticking = false;
+
+    const getStickyOffset = () => {
+      const value = getComputedStyle(document.documentElement)
+        .getPropertyValue("--sticky-offset")
+        .trim();
+      const parsed = Number.parseFloat(value);
+      return Number.isNaN(parsed) ? 90 : parsed;
+    };
+
+    const update = () => {
+      ticking = false;
+      if (!tabBarRef.current) {
+        return;
+      }
+      const offset = getStickyOffset();
+      const rect = tabBarRef.current.getBoundingClientRect();
+      setIsStuck(rect.top <= offset + 1);
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
   return (
     <div className="category-tabs">
-      <div className="tab-list" role="tablist" aria-label="Product categories">
-        {categories.map((category) => {
-          const isActive = category.key === activeKey;
-          return (
-            <button
-              key={category.key}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-controls={`tab-panel-${category.key}`}
-              id={`tab-${category.key}`}
-              className="tab-button"
-              data-active={isActive}
-              onClick={() => setActiveKey(category.key)}
-            >
-              {category.label}
-            </button>
-          );
-        })}
+      <div
+        ref={tabBarRef}
+        className={`tab-bar${isStuck ? " is-stuck" : ""}`}
+        aria-label="Product categories"
+      >
+        <div className="tab-list" role="tablist">
+          {categories.map((category) => {
+            const isActive = category.key === activeKey;
+            return (
+              <button
+                key={category.key}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`tab-panel-${category.key}`}
+                id={`tab-${category.key}`}
+                className="tab-button"
+                data-active={isActive}
+                onClick={() => setActiveKey(category.key)}
+              >
+                {category.label}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {activeCategory ? (
@@ -67,7 +96,12 @@ export default function CategoryTabs({ categories }: CategoryTabsProps) {
         >
           <div className="tab-header">
             <div className="eyebrow">{activeCategory.eyebrow}</div>
-            <h3>{activeCategory.title}</h3>
+            <div className="tab-header-title">
+              <h3>{activeCategory.title}</h3>
+              <Link className="tab-link" href={`/categories/${activeCategory.key}`}>
+                View category page
+              </Link>
+            </div>
             <p>{activeCategory.description}</p>
           </div>
           <div className="product-grid">
@@ -76,7 +110,15 @@ export default function CategoryTabs({ categories }: CategoryTabsProps) {
                 <div className="seal">Teen-approved</div>
                 <div className="product-image">
                   {product.imageUrl ? (
-                    <img src={product.imageUrl} alt={product.name} loading="lazy" />
+                    <Image
+                      src={product.imageUrl}
+                      alt={product.name}
+                      width={480}
+                      height={360}
+                      unoptimized
+                      sizes="(max-width: 720px) 90vw, (max-width: 1100px) 45vw, 320px"
+                      style={{ objectFit: "contain" }}
+                    />
                   ) : (
                     <span>{product.imageLabel}</span>
                   )}
